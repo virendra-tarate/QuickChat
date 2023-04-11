@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/message_bg"
+    tools:context=".MessageActivity">
+
+<!--Chatting user info tooolbar here-->
+    <LinearLayout
+        android:id="@+id/message_layout"
+        android:layout_width="0dp"
+        android:layout_height="75sp"
+        android:background="#F700FF"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="55sp"
+            android:layout_height="55sp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="55sp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/toolbar_image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/account_img"/>
+
+        </androidx.cardview.widget.CardView>
+
+<!--        Username of user-->
+
+        <TextView
+            android:id="@+id/chattingPerson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_gravity="center"
+            android:textSize="22sp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+<!--    Progress bar for reloading the message from firebase-->
+    <ProgressBar
+        android:id="@+id/messageProgress"
+        android:layout_width="200sp"
+        android:layout_height="200sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/message_layout" />
+
+    <!--Recycler view to load message-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/messageRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/message_layout" />
+
+
+    <!--Edittext for sending messages-->
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="0sp"
+        android:minHeight="46sp"
+        android:maxHeight="100sp"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10sp"
+        android:paddingHorizontal="20sp"
+        android:layout_margin="7sp"
+        android:background="@drawable/send_msg_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sendMessageImage"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/sendMessageImage"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_marginBottom="9sp"
+        android:src="@drawable/send_img"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

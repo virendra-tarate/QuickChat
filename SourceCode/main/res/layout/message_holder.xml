@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="11sp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/constraintlayout2">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profileCardviewImg"
+            android:layout_width="35sp"
+            android:layout_height="35sp"
+            app:cardCornerRadius="35sp"
+            android:layout_marginHorizontal="10sp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/smallProfileImage"
+                android:scaleType="centerCrop"
+                android:src="@drawable/account_img"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <!--Text View for MEssage Content-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="9sp"
+            android:background="@drawable/message_txt_bg"
+
+            android:textColor="@color/black"
+            android:maxWidth="200sp"
+            android:padding="10sp"
+            android:id="@+id/messageText"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

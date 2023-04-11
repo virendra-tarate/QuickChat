@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".AboutApp">
+
+    <TextView
+        android:id="@+id/AppHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QuickChat"
+        android:textColor="@color/white"
+        android:textSize="42sp"
+        android:fontFamily="monospace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10sp"/>
+
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AppHeading">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16sp"
+            android:text="Credits"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="@+id/AppHeading"
+            app:layout_constraintStart_toStartOf="@+id/AppHeading"
+            app:layout_constraintTop_toBottomOf="@+id/AppHeading" />
+
+        <TextView
+            android:id="@+id/crd1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11sp"
+            android:text="Tarate Virendra"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/crd2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11sp"
+            android:text="Thete Jayesh"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/crd1"
+            app:layout_constraintStart_toStartOf="@+id/crd1"
+            app:layout_constraintTop_toBottomOf="@+id/crd1" />
+
+        <TextView
+            android:id="@+id/crd3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11sp"
+            android:text="Thorat Vedant"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/crd2"
+            app:layout_constraintStart_toStartOf="@+id/crd2"
+            app:layout_constraintTop_toBottomOf="@+id/crd2" />
+
+        <TextView
+            android:id="@+id/crd4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11sp"
+            android:text="Sarode Prajwal"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/crd3"
+            app:layout_constraintStart_toStartOf="@+id/crd3"
+            app:layout_constraintTop_toBottomOf="@+id/crd3" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/CopyRight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="©️ All Right Reserved By Team Interstellars"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:layout_gravity="center"
+            android:padding="7sp"
+            android:layout_marginBottom="12sp"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
