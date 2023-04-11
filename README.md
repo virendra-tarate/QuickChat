@@ -9,6 +9,8 @@ The AES encryption used by this app is considered one of the most secure and tru
 
 Overall, this app is an excellent choice for anyone who values privacy and security and wants to communicate with others without the risk of their messages being intercepted or accessed by unauthorized parties. With AES encryption and other security features, this app provides peace of mind to its users and allows them to communicate in a truly private and secure way.
 
+![Alt text](QuickChat%20Logo.png?raw=true "QuickChat")
+
 **Features:** 
 
 1.End-to-End Encryption: All messages are encrypted using AES encryption, ensuring that only the intended recipient can read them. This encryption method is widely recognized as being highly secure and is used by many security-conscious organizations.
