@@ -25,4 +25,3 @@ Overall, this app is an excellent choice for anyone who values privacy and secur
 
 Download Link 1 : https://team-interstellars.000webhostapp.com/
 
-Download Link 2 : https://www.mediafire.com/file/cyerzfg0z9laig8/QuickChat_Signed_version_1_0.apk/file
