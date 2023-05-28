@@ -1,5 +1,3 @@
-// This Project is Created by Team Interstellars For Solving For India Hack-a-thon by Geeks for Geeks
-// ©️ All Rights Reserved By Team Interstellars
 package com.a.v.virendra.tarate.project;
 
 import androidx.annotation.NonNull;
@@ -34,7 +32,7 @@ public class Profile extends AppCompatActivity {
     private Button btnLogOut,btnUpload;
     private ImageView imgProfile,aboutImg;
     private Uri imagePath;
-    private TextView currentUserEmail;
+    private TextView currentUserEmail,currentUserName,currentUserNumber;
 
 
     @Override
@@ -50,9 +48,13 @@ public class Profile extends AppCompatActivity {
         imgProfile = findViewById(R.id.profile_img);
         currentUserEmail = findViewById(R.id.txtUserEmail);
         aboutImg = findViewById(R.id.aboutApp);
+        currentUserName = findViewById(R.id.txtuserName);
+        currentUserNumber = findViewById(R.id.txtuserNumber);
 
         //load current users email in profile activity
-        currentUserEmail.setText(FirebaseAuth.getInstance().getCurrentUser().getEmail());
+        currentUserEmail.setText(getIntent().getStringExtra("myEmail"));
+        currentUserName.setText(getIntent().getStringExtra("myUsername"));
+        currentUserNumber.setText(FirebaseAuth.getInstance().getCurrentUser().getPhoneNumber().toString());
 
         //about image is Clicked
         aboutImg.setOnClickListener(new View.OnClickListener() {

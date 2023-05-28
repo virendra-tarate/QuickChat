@@ -1,5 +1,3 @@
-<!-- This Project is Created by Team Interstellars For Solving For India Hack-a-thon by Geeks for Geeks -->
-<!-- ©️ All Rights Reserved By Team Interstellars -->
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -28,15 +26,38 @@
 
         </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:id="@+id/txtUsername"
-            android:layout_width="wrap_content"
-            android:textColor="@color/white"
+        <LinearLayout
             android:layout_marginLeft="20sp"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:textSize="20sp"
-            android:layout_height="wrap_content"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:gravity="start">
+
+            <TextView
+                android:id="@+id/txtUsername"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:text="Virendra Tarate"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="17sp"
+                android:text="+917620421281"/>
+
+        </LinearLayout>
+
+
 
     </LinearLayout>
 

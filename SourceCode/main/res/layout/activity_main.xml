@@ -1,5 +1,3 @@
-<!-- This Project is Created by Team Interstellars For Solving For India Hack-a-thon by Geeks for Geeks -->
-<!-- ©️ All Rights Reserved By Team Interstellars -->
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,6 +7,29 @@
     android:background="@drawable/gradient"
     tools:context=".MainActivity">
 
+    <!--Mobile Number-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Edittextlayout4"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mobile Number"
+        android:textColorHint="#F6F6F6"
+        android:layout_marginTop="150sp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtMobileNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
 <!--    Input field for Username-->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/Edittextlayout1"
@@ -17,17 +38,18 @@
         android:layout_height="wrap_content"
         android:hint="Username"
         android:textColorHint="#F6F6F6"
-        app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Edittextlayout4"
         app:layout_constraintVertical_bias="0.419">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edtUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:singleLine="true"
             android:textColor="@color/white"
             android:textColorHint="@color/white" />
 
@@ -44,36 +66,51 @@
         android:textColorHint="#F6F6F6"
         app:layout_constraintTop_toBottomOf="@+id/Edittextlayout1">
 
-        <com.google.android.material.textfield.TextInputEditText
+    <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:singleLine="true"
             android:textColor="@color/white"
             android:textColorHint="@color/white"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
-
-    <!--Input Field for Password-->
+    <!--Otp and Generate otp button-->
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/Edittextlayout3"
+        android:id="@+id/Edittextlayout5"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
+        android:layout_width="171sp"
         android:layout_height="wrap_content"
-        android:hint="Password"
+        android:layout_marginLeft="11sp"
+        android:hint="OTP"
         android:textColorHint="#F6F6F6"
         app:layout_constraintTop_toBottomOf="@+id/Edittextlayout2">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtPassword"
-            android:layout_width="match_parent"
+            android:id="@+id/edtotp"
+            android:layout_width="160sp"
+            android:layout_marginLeft="11sp"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
+            android:singleLine="true"
             android:textColor="@color/white"
-            android:textColorHint="@color/white"/>
+            android:textColorHint="@color/white" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnotp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generate OTP"
+        android:background="@drawable/btn_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="14sp"
+        android:layout_marginTop="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/Edittextlayout2" />
+
+
 
     <!--        Button for Submitting Details -->
 
@@ -81,20 +118,20 @@
         android:id="@+id/btnSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
-        android:text="Sign UP"
         android:background="@drawable/btn_background"
+        android:text="Sign UP"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Edittextlayout3"/>
+        app:layout_constraintTop_toBottomOf="@+id/Edittextlayout2" />
 
     <!--A Text for sign up and login -->
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="12sp"
         android:id="@+id/textlogin"
         android:text="Already have an account? Log in"
         android:textColor="@color/white"

@@ -1,5 +1,3 @@
-// This Project is Created by Team Interstellars For Solving For India Hack-a-thon by Geeks for Geeks
-// ©️ All Rights Reserved By Team Interstellars
 package com.a.v.virendra.tarate.project;
 
 public class User {
@@ -8,20 +6,23 @@ public class User {
     private String email;
     //here Profile Picture Is an URL
     private String profilePicture;
+    private String myphone;
 
     //An Empty Constructor for Firebase
-    public User(){
+    public User() {
 
     }
 
 
     //constructor
-    public User(String username, String email, String profilePicture) {
+
+
+    public User(String username, String email, String profilePicture, String myphone) {
         this.username = username;
         this.email = email;
         this.profilePicture = profilePicture;
+        this.myphone = myphone;
     }
-
 
     public String getUsername() {
         return username;
@@ -45,5 +46,13 @@ public class User {
 
     public void setProfilePicture(String profilePicture) {
         this.profilePicture = profilePicture;
+    }
+
+    public String getMyphone() {
+        return myphone;
+    }
+
+    public void setMyphone(String myphone) {
+        this.myphone = myphone;
     }
 }

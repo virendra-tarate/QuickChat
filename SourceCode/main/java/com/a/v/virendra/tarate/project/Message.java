@@ -1,5 +1,3 @@
-// This Project is Created by Team Interstellars For Solving For India Hack-a-thon by Geeks for Geeks
-// ©️ All Rights Reserved By Team Interstellars
 package com.a.v.virendra.tarate.project;
 
 public class Message {
@@ -13,9 +11,7 @@ public class Message {
 
     }
 
-
-
-    //geeters and setters
+    //gettters and setters
 
 
     public String getSender() {
@@ -42,8 +38,9 @@ public class Message {
         this.contet = contet;
     }
 
-
     //constructor
+
+
     public Message(String sender, String reciver, String contet) {
         this.sender = sender;
         this.reciver = reciver;

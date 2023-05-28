@@ -1,5 +1,3 @@
-// This Project is Created by Team Interstellars For Solving For India Hack-a-thon by Geeks for Geeks
-// ©️ All Rights Reserved By Team Interstellars
 package com.a.v.virendra.tarate.project;
 
 import androidx.annotation.NonNull;
@@ -26,13 +24,15 @@ import java.util.ArrayList;
 
 public class FriendsActivity extends AppCompatActivity {
 
+    private long pressedTime;
     private RecyclerView recyclerView;
     private ArrayList<User> users;
     private ProgressBar progressBar;
     private UsersAdapter usersAdapter;
     UsersAdapter.OnUserClickListener onUserClickListener;
     private SwipeRefreshLayout swipeRefreshLayout;
-    String MyImgUrl;
+    String MyImgUrl,myUsername,myEmail;
+
 
 
     @Override
@@ -45,6 +45,7 @@ public class FriendsActivity extends AppCompatActivity {
         users = new ArrayList<>();
         recyclerView = findViewById(R.id.recycler);
         swipeRefreshLayout = findViewById(R.id.swipeLayout);
+
 
 
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -61,14 +62,16 @@ public class FriendsActivity extends AppCompatActivity {
             public void OnUserClicked(int position) {
                 //when Clicked on user
 
-                startActivity(new Intent(FriendsActivity.this,MessageActivity.class)
-                        .putExtra("username_of_roommate",users.get(position).getUsername())
-                        .putExtra("email_of_roommate",users.get(position).getEmail())
-                        .putExtra("img_of_roommate",users.get(position).getProfilePicture())
-                        .putExtra("my_img",MyImgUrl)
+                    startActivity(new Intent(FriendsActivity.this, MessageActivity.class)
+                            .putExtra("username_of_roommate", users.get(position).getUsername())
+                            .putExtra("email_of_roommate", users.get(position).getEmail())
+                            .putExtra("img_of_roommate", users.get(position).getProfilePicture())
+                            .putExtra("my_img", MyImgUrl)
+                            .putExtra("phoneNum", users.get(position).getMyphone())
 
-                );
+                    );
 
+                    
             }
         };
 
@@ -87,7 +90,9 @@ public class FriendsActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
         if(item.getItemId() == R.id.menue_item_profile){
-            startActivity(new Intent(FriendsActivity.this,Profile.class));
+            startActivity(new Intent(FriendsActivity.this,Profile.class).putExtra("myEmail",myEmail)
+                    .putExtra("myUsername",myUsername)
+            );
         }
 
         return super.onOptionsItemSelected(item);
@@ -112,8 +117,11 @@ public class FriendsActivity extends AppCompatActivity {
 
                 //loop to get our own image
                 for (User user:users){
-                    if(user.getEmail().equals(FirebaseAuth.getInstance().getCurrentUser().getEmail())){
+                    String tempValue = "+91"+user.getMyphone();
+                    if(tempValue.equals(FirebaseAuth.getInstance().getCurrentUser().getPhoneNumber().toString())){
                         MyImgUrl = user.getProfilePicture();
+                        myUsername = user.getUsername();
+                        myEmail = user.getEmail();
                         return;
                     }
                 }
@@ -128,5 +136,19 @@ public class FriendsActivity extends AppCompatActivity {
 
     }
 
+    //when back button is Pressed
+
+
+    @Override
+    public void onBackPressed() {
+        if (pressedTime + 2000 > System.currentTimeMillis()) {
+            super.onBackPressed();
+            finishAffinity();
+        } else {
+            Toast.makeText(getBaseContext(), "Press back again to exit", Toast.LENGTH_SHORT).show();
+        }
+        pressedTime = System.currentTimeMillis();
+
+    }
 
 }

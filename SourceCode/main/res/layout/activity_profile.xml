@@ -1,5 +1,3 @@
-<!-- This Project is Created by Team Interstellars For Solving For India Hack-a-thon by Geeks for Geeks -->
-<!-- ©️ All Rights Reserved By Team Interstellars -->
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -16,6 +14,18 @@
         android:src="@drawable/about_app"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtuserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:layout_marginBottom="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtUserEmail"
+        app:layout_constraintEnd_toEndOf="@+id/txtUserEmail"
+        app:layout_constraintStart_toStartOf="@+id/txtUserEmail" />
 
     <TextView
         android:id="@+id/txtUserEmail"
@@ -80,5 +90,18 @@
         app:layout_constraintEnd_toEndOf="@+id/btnUploadImage"
         app:layout_constraintStart_toStartOf="@+id/btnUploadImage"
         app:layout_constraintTop_toBottomOf="@+id/btnUploadImage" />
+
+    <TextView
+        android:id="@+id/txtuserNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="+911234567899"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnLogOut"
+        app:layout_constraintStart_toStartOf="@+id/btnLogOut"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogOut" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

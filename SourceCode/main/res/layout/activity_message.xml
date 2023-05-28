@@ -1,5 +1,3 @@
-<!-- This Project is Created by Team Interstellars For Solving For India Hack-a-thon by Geeks for Geeks -->
-<!-- ©️ All Rights Reserved By Team Interstellars -->
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -24,6 +22,7 @@
             android:layout_width="55sp"
             android:layout_height="55sp"
             android:layout_gravity="center"
+            android:layout_marginLeft="8sp"
             app:cardCornerRadius="55sp">
 
             <ImageView
@@ -37,15 +36,37 @@
 
 <!--        Username of user-->
 
-        <TextView
-            android:id="@+id/chattingPerson"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20sp"
-            android:layout_gravity="center"
-            android:textSize="22sp"
-            android:textColor="@color/white"
-            android:textStyle="bold" />
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/chattingPerson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_gravity="center"
+                android:text="Virendra Tarate"
+                android:paddingRight="10sp"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_gravity="center"
+                android:textSize="19sp"
+                android:paddingRight="10sp"
+                android:textColor="@color/white"
+                android:text="+917620421281"/>
+
+        </LinearLayout>
+
+
 
     </LinearLayout>
 
@@ -84,7 +105,9 @@
         android:background="@drawable/send_msg_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/sendMessageImage"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:hint="Message"
+        android:textColorHint="#959595"/>
 
     <ImageView
         android:id="@+id/sendMessageImage"

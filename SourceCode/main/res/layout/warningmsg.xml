@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FF0000">
+
+    <LinearLayout
+        android:layout_marginTop="9sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+
+        android:background="#FF0000">
+        <ImageView
+            android:layout_width="27sp"
+            android:layout_height="27sp"
+            android:src="@drawable/block"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Violating our Terms of Service"
+            android:textSize="23sp"
+            android:textColor="@color/white"
+            android:gravity="center"/>
+
+        <ImageView
+            android:layout_width="27sp"
+            android:layout_height="27sp"
+            android:src="@drawable/block"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="19sp"
+            android:text="This Message Content Some Violent Text"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:textColor="@color/white"
+            android:textSize="47sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="10sp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

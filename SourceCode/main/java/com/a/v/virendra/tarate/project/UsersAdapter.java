@@ -1,5 +1,3 @@
-// This Project is Created by Team Interstellars For Solving For India Hack-a-thon by Geeks for Geeks
-// ©️ All Rights Reserved By Team Interstellars
 package com.a.v.virendra.tarate.project;
 
 import android.content.Context;
@@ -52,6 +50,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserHolder> 
     public void onBindViewHolder(@NonNull UserHolder holder, int position) {
 
         holder.txtUsername.setText(users.get(position).getUsername());
+        holder.mobileNumber.setText("+91"+users.get(position).getMyphone());
         Glide.with(context).load(users.get(position).getProfilePicture()).error(R.drawable.account_img).placeholder(R.drawable.account_img).into(holder.imageView);
 
     }
@@ -63,7 +62,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserHolder> 
 
     class UserHolder extends RecyclerView.ViewHolder{
 
-        TextView txtUsername;
+        TextView txtUsername,mobileNumber;
         ImageView imageView;
 
         //constructor
@@ -79,6 +78,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserHolder> 
 
 
             txtUsername = itemView.findViewById(R.id.txtUsername);
+            mobileNumber = itemView.findViewById(R.id.mobile);
             imageView = itemView.findViewById(R.id.img_pro);
 
         }

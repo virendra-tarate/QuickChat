@@ -1,5 +1,3 @@
-// This Project is Created by Team Interstellars For Solving For India Hack-a-thon by Geeks for Geeks
-// ©️ All Rights Reserved By Team Interstellars
 package com.a.v.virendra.tarate.project;
 
 import android.content.Context;
@@ -17,8 +15,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Base64;
+import java.util.Date;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
@@ -26,7 +26,7 @@ import javax.crypto.spec.SecretKeySpec;
 public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageHolder> {
 
     private ArrayList<Message> messages;
-    private String senderImg,reciverImg;
+    private String senderImg,reciverImg,currentTime;
     private Context context;
 
     private static final String EncryptionKEY = "VRT0JST0PRS0VVT1"; // key i.e. 128bit
@@ -54,7 +54,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageH
 
         ConstraintLayout constraintLayout = holder.ccli;
 
-        if(messages.get(position).getSender().equals(FirebaseAuth.getInstance().getCurrentUser().getEmail())){
+        if(messages.get(position).getSender().equals(FirebaseAuth.getInstance().getCurrentUser().getPhoneNumber().toString())){
             //sending Messages
 
             //obtain image using glide lib
@@ -64,8 +64,11 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageH
             constraintSet.clone(constraintLayout);
             constraintSet.clear(R.id.profileCardviewImg,ConstraintSet.LEFT);
             constraintSet.clear(R.id.messageText,ConstraintSet.LEFT);
+            constraintSet.clear(R.id.cTime,ConstraintSet.LEFT);
             constraintSet.connect(R.id.profileCardviewImg,ConstraintSet.RIGHT,R.id.constraintlayout2,ConstraintSet.RIGHT,0);
             constraintSet.connect(R.id.messageText,ConstraintSet.RIGHT,R.id.profileCardviewImg,ConstraintSet.LEFT,0);
+            constraintSet.connect(R.id.cTime,ConstraintSet.RIGHT,R.id.constraintlayout2,ConstraintSet.RIGHT,4);
+            constraintSet.connect(R.id.cTime,ConstraintSet.TOP,R.id.messageText,ConstraintSet.BOTTOM,4);
             constraintSet.applyTo(constraintLayout);
 
 
@@ -79,8 +82,11 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageH
             constraintSet.clone(constraintLayout);
             constraintSet.clear(R.id.profileCardviewImg,ConstraintSet.RIGHT);
             constraintSet.clear(R.id.messageText,ConstraintSet.RIGHT);
+            constraintSet.clear(R.id.cTime,ConstraintSet.RIGHT);
             constraintSet.connect(R.id.profileCardviewImg,ConstraintSet.LEFT,R.id.constraintlayout2,ConstraintSet.LEFT,0);
             constraintSet.connect(R.id.messageText,ConstraintSet.LEFT,R.id.profileCardviewImg,ConstraintSet.RIGHT,0);
+            constraintSet.connect(R.id.cTime,ConstraintSet.LEFT,R.id.constraintlayout2,ConstraintSet.LEFT,4);
+            constraintSet.connect(R.id.cTime,ConstraintSet.TOP,R.id.messageText,ConstraintSet.BOTTOM,4);
             constraintSet.applyTo(constraintLayout);
 
         }
@@ -98,8 +104,9 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageH
     class MessageHolder extends RecyclerView.ViewHolder{
 
         ConstraintLayout ccli;
-        TextView txtxMessage;
+        TextView txtxMessage,currentTimetxt;
         ImageView profileImg;
+
 
 
         public MessageHolder(@NonNull View itemView) {
@@ -107,7 +114,10 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageH
 
             ccli = itemView.findViewById(R.id.constraintlayout2);
             txtxMessage = itemView.findViewById(R.id.messageText);
+            currentTimetxt = itemView.findViewById(R.id.cTime);
             profileImg = itemView.findViewById(R.id.smallProfileImage);
+
+
 
 
         }
