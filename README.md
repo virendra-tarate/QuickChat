@@ -1,5 +1,5 @@
 # QuickChat - Team Interstellars
-**About QuickChat:** 
+## About QuickChat : 
 
 The QuickChat is a secure and private messaging platform that uses the Advanced Encryption Standard (AES) to protect all messages exchanged between users. This app offers users the ability to communicate with each other in a secure and confidential manner, ensuring that their conversations remain private and cannot be accessed by anyone else.
 
@@ -11,7 +11,7 @@ Overall, this app is an excellent choice for anyone who values privacy and secur
 
 ![Alt text](QuickChat%20Logo.png?raw=true "QuickChat")
 
-**Features:** 
+## Features :
 
 1.End-to-End Encryption: All messages are encrypted using AES encryption, ensuring that only the intended recipient can read them. This encryption method is widely recognized as being highly secure and is used by many security-conscious organizations.
 
@@ -24,4 +24,9 @@ Overall, this app is an excellent choice for anyone who values privacy and secur
 
 
 Download Link 1 : https://team-interstellars.000webhostapp.com/
+
+## Warning : 
+Unauthorized use, reproduction, or distribution of this code, in whole or in part, without the explicit permission of the owner, is strictly prohibited and may result in severe legal consequences under the relevant IT Act and other applicable laws.
+To use this code, you must first obtain written permission from the owner. For inquiries regarding licensing, collaboration, or any other use of the code, please contact virendratarte22@gmail.com.
+Thank you for respecting the intellectual property rights of the owner.
 
